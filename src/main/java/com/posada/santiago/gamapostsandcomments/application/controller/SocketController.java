@@ -61,7 +61,7 @@ public class SocketController {
 
         var message = gson.toJson(model);
         if (Objects.nonNull(correlationId) && sessions.containsKey(correlationId)) {
-            logger.info("sent from " + correlationId);
+            logger.info("Post sent from " + correlationId);
 
             sessions.get(correlationId).values()
                     .forEach(session -> {
@@ -78,7 +78,7 @@ public class SocketController {
 
         var message = gson.toJson(model);
         if (Objects.nonNull(correlationId) && sessions.containsKey(correlationId)) {
-            logger.info("sent from " + correlationId);
+            logger.info("Comment sent from " + correlationId);
 
             sessions.get(correlationId).values()
                     .forEach(session -> {
